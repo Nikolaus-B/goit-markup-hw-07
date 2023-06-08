@@ -129,7 +129,172 @@ desktop -  1158px */
   color: var(--title-text-color);
 }
 
-/* modal menu */
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  transition: color var(--transition-dur-and-func);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--button-accent-color);
+}
+
+.nav-link.active-page {
+  position: relative;
+  color: var(--button-accent-color);
+}
+
+.active-page::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--button-accent-color);
+}
+
+.header-address {
+  margin-left: auto;
+}
+
+.address-link {
+  font-style: normal;
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
+  color: var(--primary-text-color);
+  transition: color var(--transition-dur-and-func);
+}
+.address-link:hover,
+.address-link:focus {
+  color: var(--button-accent-color);
+}
+
+/* header> */
+
+/* hero */
+.hero-section {
+  background-color: var(--title-text-color);
+  max-width: 428px;
+  height: 432px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/mobile-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-container {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+.hero-text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+
+  text-align: center;
+  color: var(--main-wtite-color);
+
+  max-width: 320px;
+  height: 80px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
+
+.hero-button {
+  display: block;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: inherit;
+  border: none;
+  transition: background-color var(--transition-dur-and-func);
+
+  letter-spacing: 0.04em;
+  color: var(--main-wtite-color);
+  background-color: var(--main-logo-color);
+  cursor: pointer;
+
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  text-align: center;
+  margin: 0 auto;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--button-accent-color);
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile-hero@2x.jpg);
+  }
+}
+/* hero> */
+
+/* advantages */
+.advantages-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.advantages-icon {
+  display: none;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  margin-bottom: 8px;
+
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+
+.advantages-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* advantages> */
+
+/* modal menu + only mobile */
 
 @media screen and (max-width: 767px) {
   .list-nav {
@@ -138,10 +303,6 @@ desktop -  1158px */
 
   .main-address {
     display: none;
-  }
-
-  .header-container {
-    justify-content: space-between;
   }
 
   .mobile-open {
@@ -298,9 +459,18 @@ desktop -  1158px */
   }
 }
 
+@media screen and (max-width: 767px) {
+  .advantages-title {
+    text-align: center;
+  }
+  .advantages-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
+
 /* modal menu> */
 
-/* tablet header */
+/* tablet */
 
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -309,11 +479,7 @@ desktop -  1158px */
   .mobile-open {
     display: none;
   }
-
-  .header-container {
-    justify-content: baseline;
-  }
-
+  /* header */
   .main-nav {
     display: flex;
     align-items: center;
@@ -323,61 +489,38 @@ desktop -  1158px */
     display: flex;
     gap: 40px;
   }
-}
 
-.nav-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* hero */
+  .hero-section {
+    max-width: 768px;
+    height: 436px;
 
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  transition: color var(--transition-dur-and-func);
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--button-accent-color);
-}
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-hero.jpg);
+  }
 
-.nav-link.active-page {
-  position: relative;
-  color: var(--button-accent-color);
-}
+  .hero-text {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    min-width: 496px;
+    height: 120px;
+  }
 
-.active-page::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+  /* advantages */
 
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
 
-  background-color: var(--button-accent-color);
-}
-
-.header-address {
-  margin-left: auto;
-}
-
-.address-link {
-  font-style: normal;
-  margin-left: auto;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-
-  letter-spacing: 0.04em;
-  color: var(--primary-text-color);
-  transition: color var(--transition-dur-and-func);
-}
-.address-link:hover,
-.address-link:focus {
-  color: var(--button-accent-color);
+  .advantages-text {
+    max-width: 356px;
+  }
 }
 
 @media screen and (max-width: 1157px) {
@@ -390,10 +533,24 @@ desktop -  1158px */
   }
 }
 
-/* tablet header> */
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1157px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1157px),
+  screen and (min-resolution: 192dpi) and (max-width: 1157px),
+  screen and (min-resolution: 2dppx) and (max-width: 1157px) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-hero@2x.jpg);
+  }
+}
 
-/* desktop header */
+/* tablet> */
+
+/* desktop  */
 @media screen and (min-width: 1158px) {
+  /* header */
   .main-address {
     display: flex;
     gap: 40px;
@@ -403,7 +560,77 @@ desktop -  1158px */
     font-size: 16px;
     line-height: 1.5;
   }
-}
-/* desktop header> */
+  /* hero */
+  .hero-section {
+    max-width: 1440px;
+    height: 600px;
 
-/* header >*/
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-hero.jpg);
+  }
+
+  .hero-container {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+
+  .hero-text {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 48px;
+  }
+
+  /* advantages */
+  .advantages-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .advantages-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .advantages-icon {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+
+    background-color: var(--button-back-color);
+
+    margin-bottom: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .advantages-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .advantages-text {
+    font-weight: 400;
+    max-width: 264px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1158px),
+  screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-hero@2x.jpg);
+  }
+}
+/* desktop> */
