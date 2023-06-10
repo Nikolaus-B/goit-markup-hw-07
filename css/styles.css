@@ -71,6 +71,7 @@ tablet - 768px(736+32)
 desktop -  1158px */
 
 .container {
+  min-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
   /* outline: 2px solid aquamarine; */
@@ -104,6 +105,7 @@ desktop -  1158px */
 .header-container {
   display: flex;
   align-items: center;
+  min-width: 320px;
 }
 
 .main-logo {
@@ -315,6 +317,10 @@ desktop -  1158px */
   border-radius: 0px 0px 4px 4px;
 }
 
+.employee-position {
+  padding: 32px 16px;
+}
+
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -324,10 +330,6 @@ desktop -  1158px */
   text-align: center;
   text-transform: capitalize;
   color: var(--title-text-color);
-}
-
-.team-img {
-  margin-bottom: 32px;
 }
 
 .team-employee {
@@ -352,7 +354,6 @@ desktop -  1158px */
   display: flex;
   gap: 24px;
   justify-content: center;
-  margin-bottom: 32px;
 }
 
 .links-social {
@@ -1161,6 +1162,11 @@ desktop -  1158px */
   }
 
   .mobile-menu-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     padding-left: 40px;
     padding-right: 35px;
@@ -1203,10 +1209,6 @@ desktop -  1158px */
     fill: var(--main-wtite-color);
   }
 
-  .mobile-nav {
-    margin-bottom: 284px;
-  }
-
   .mobile-links:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -1231,6 +1233,7 @@ desktop -  1158px */
   }
 
   .menu-phone-link {
+    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -1243,6 +1246,7 @@ desktop -  1158px */
   }
 
   .menu-mail-link {
+    font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -1292,24 +1296,18 @@ desktop -  1158px */
   }
   /* footer */
 
-  .footer-list {
-    margin-bottom: 72px;
-  }
-
-  .footer-text {
-    margin-bottom: 72px;
-  }
-
   .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 72px;
   }
 
   .footer-links {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 72px;
   }
 
   .footer-subscribe-form {
@@ -1447,9 +1445,9 @@ desktop -  1158px */
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
+    width: 584px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-content: flex-start;
 
     gap: 72px 24px;
