@@ -71,22 +71,18 @@ tablet - 768px(736+32)
 desktop -  1158px */
 
 .container {
-  min-width: 320px;
+  max-width: 428px;
   padding-left: 16px;
   padding-right: 16px;
+  margin: 0 auto;
   /* outline: 2px solid aquamarine; */
 
-  @media screen and (min-width: 428px) {
-    width: 428px;
-    margin: 0 auto;
-  }
-
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
   }
 
   @media screen and (min-width: 1158px) {
-    width: 1158px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -510,8 +506,16 @@ desktop -  1158px */
   color: var(--main-wtite-color);
 }
 
+.footer-form {
+  width: 100%;
+}
+
+.footer-form-label {
+  width: 100%;
+}
+
 .footer-input {
-  width: 398px;
+  width: 100%;
   height: 40px;
   padding-left: 16px;
   font-size: 12px;
@@ -685,6 +689,7 @@ desktop -  1158px */
 
 .modal-form {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -704,6 +709,7 @@ desktop -  1158px */
 
 .modal-label {
   display: block;
+  width: 100%;
   font-size: 12px;
   line-height: 1.17;
   margin-bottom: 4px;
@@ -890,7 +896,8 @@ desktop -  1158px */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 392px;
+  width: 100%;
+  max-width: 392px;
   min-height: 584px;
   padding: 72px 16px 24px 16px;
   transition: transform var(--transition-dur-and-func);
@@ -1257,6 +1264,10 @@ desktop -  1158px */
     color: var(--button-accent-color);
   }
 
+  .nav-plus-links {
+    width: 100%;
+  }
+
   .menu-social-links {
     display: flex;
     gap: 56px;
@@ -1267,7 +1278,6 @@ desktop -  1158px */
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 40px;
     height: 40px;
     border-radius: 50%;
