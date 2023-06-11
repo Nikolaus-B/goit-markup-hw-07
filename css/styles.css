@@ -1270,8 +1270,7 @@ desktop -  1158px */
 
   .menu-social-links {
     display: flex;
-    gap: 56px;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .menu-links-social {
